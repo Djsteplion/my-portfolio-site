@@ -1,0 +1,110 @@
+import { useMemo, useState } from 'react';
+import { portfolioItems } from '../data/portfolio';
+import type { FilterValue } from '../types';
+import { useCarousel } from '../hooks/useCarousel';
+import { useSwipe } from '../hooks/useSwipe';
+import PortfolioCard from './PortfolioCard';
+import { useScrollReveal } from '../hooks/useScrollReveal';
+
+const filters: { label: string; value: FilterValue }[] = [
+  { label: 'All', value: 'all' },
+  { label: 'Basic', value: 'basic' },
+  { label: 'Intermediate', value: 'intermediate' },
+  { label: 'Advanced', value: 'advanced' },
+];
+
+export default function Portfolio() {
+  const [activeFilter, setActiveFilter] = useState<FilterValue>('all');
+  const headerRef = useScrollReveal<HTMLDivElement>();
+  const containerRef = useScrollReveal<HTMLDivElement>();
+
+  const filteredItems = useMemo(
+    () => (activeFilter === 'all' ? portfolioItems : portfolioItems.filter((item) => item.category === activeFilter)),
+    [activeFilter]
+  );
+
+  const { slidesPerView, next, prev, canGoNext, canGoPrev, trackPercent } = useCarousel(filteredItems);
+  const swipeHandlers = useSwipe(next, prev);
+
+  return (
+    <section
+      id="portfolio"
+      className="bg-[var(--bg-color)] px-[70px] pb-[30px] pt-[110px] text-[var(--text-main)]
+        max-[1024px]:px-5 max-[1024px]:pb-[100px] max-[1024px]:pt-[150px]
+        max-[700px]:px-2.5 max-[700px]:pb-0 max-[700px]:pt-[30px]"
+    >
+      <div
+        ref={headerRef}
+        className="reveal flex flex-row items-end justify-between pb-[60px] max-[700px]:pr-[15px]"
+      >
+        <div className="flex flex-col items-start">
+          <span className="flex items-center gap-3 text-xs uppercase tracking-[4px] text-[#999999] before:h-0.5 before:w-5 before:bg-[#999999] before:content-['']">
+            My Works
+          </span>
+          <h2 className="mt-2.5 text-[36px] font-bold text-[#2A2C3C] max-[768px]:text-[36px]">Featured Portfolios</h2>
+        </div>
+        <div className="flex flex-row gap-4">
+          <button
+            onClick={prev}
+            disabled={!canGoPrev}
+            aria-label="Previous projects"
+            className="flex items-center justify-center rounded-[18px] border-none p-2.5 text-lg outline-none transition-all duration-300 hover:cursor-pointer hover:scale-125 hover:bg-[#F0F0FF] disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:scale-100 disabled:hover:bg-transparent"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7B61FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button
+            onClick={next}
+            disabled={!canGoNext}
+            aria-label="Next projects"
+            className="flex items-center justify-center rounded-[18px] border-none p-2.5 text-lg outline-none transition-all duration-300 hover:cursor-pointer hover:scale-125 hover:bg-[#F0F0FF] disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:scale-100 disabled:hover:bg-transparent"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7B61FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div className="mb-2.5 flex flex-row items-center justify-center gap-2.5">
+        {filters.map((filter) => (
+          <button
+            key={filter.value}
+            onClick={() => setActiveFilter(filter.value)}
+            className={`rounded-[20px] border px-[15px] py-1.5 text-[13px] transition-all duration-300 hover:cursor-pointer ${
+              activeFilter === filter.value
+                ? 'border-[#6C63FF] bg-[#6C63FF] text-white'
+                : 'border-[var(--resume-border)] bg-transparent text-[var(--text-secondary)] hover:border-[#6C63FF] hover:text-[var(--text-main)]'
+            }`}
+          >
+            {filter.label}
+          </button>
+        ))}
+      </div>
+
+      <div ref={containerRef} className="reveal relative bg-[var(--bg-color)] pt-2.5">
+        <div className="overflow-hidden">
+          <div
+            className="flex touch-pan-y transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${trackPercent}%)` }}
+            {...swipeHandlers}
+          >
+            {filteredItems.map((item) => (
+              <div
+                key={item.id}
+                className="mt-[30px] shrink-0 px-2.5"
+                style={{ width: `${100 / slidesPerView}%` }}
+              >
+                <PortfolioCard item={item} />
+              </div>
+            ))}
+          </div>
+        </div>
+        {filteredItems.length === 0 && (
+          <p className="py-10 text-center text-[var(--text-secondary)]">No projects in this category yet.</p>
+        )}
+      </div>
+    </section>
+  );
+}
