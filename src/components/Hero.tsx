@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div
       id="about"
-      className="flex flex-col-reverse items-center justify-between gap-10 px-5 pb-[70px] pt-[230px] text-left
+      className="relative flex flex-col-reverse items-center justify-between gap-10 px-5 pb-[70px] pt-[230px] text-left
         min-[1025px]:flex-row min-[1025px]:px-[70px] min-[1025px]:pr-5 min-[1025px]:text-left
         max-[1024px]:flex-col-reverse max-[1024px]:px-[30px] max-[1024px]:pt-[300px] max-[1024px]:text-center
         max-[700px]:px-[10px] max-[700px]:pt-[200px] max-[700px]:text-left"
@@ -15,7 +15,7 @@ export default function Hero() {
       <div ref={textRef} className="reveal w-full min-[1025px]:w-1/2 max-[1024px]:mt-[200px] max-[700px]:mt-[170px]">
         <div className="flex flex-row items-center justify-start max-[1024px]:justify-center max-[700px]:justify-start">
           <img src="/images/Above title line (1).png" alt="dash sign" className="h-0.5 w-5" />
-          <h5 className="ml-2.5 text-xs font-normal tracking-[3px] text-[var(--text-secondary)]">MY NAME IS</h5>
+          <h5 className="ml-2.5 text-xs font-normal tracking-[3px] text-[var(--text-secondary)]" id="hero_text">MY NAME IS</h5>
         </div>
         <div className="mt-5 flex flex-row items-center justify-start max-[1024px]:justify-center max-[700px]:justify-start">
           <h1 className="md:text-[48px] font-bold tracking-[-0.02em] text-[var(--text-main)] max-[700px]:text-[17px]">
@@ -40,11 +40,27 @@ export default function Hero() {
             <img src="/images/Linkedin (1).png" alt="Linkedin handle" className="social-icon h-5 w-5 opacity-70 [filter:brightness(0)_invert(1)] hover:opacity-100" />
           </a>
         </div>
+        {/*<div>
+          <a href="#next-section" className="scroll-down">
+            <span>Scroll Down</span>
+            <span className="scroll-arrow">↓</span>
+          </a>
+        </div>*/}
+      </div>
+      {/* Scroll down button */}
+      <div className="flex items-center jutify-center md:hidden mt-[70px]">
+         <a
+            href="#hero_text"
+            className="md:hidden flex  items-center gap-2 rounded-full border border-neutral-300 px-4 py-2 text-xs text-[var(--text-secondary)] backdrop-blur-md transition hover:border-[#6C63FF] hover:text-[#6C63FF] animate-bounce"
+          >
+            Scroll down
+            <span className="text-base">↓</span>
+          </a>
       </div>
 
       <div
         ref={imageRef}
-        className="reveal relative flex w-full items-center justify-center pt-[60px] min-[1025px]:w-1/2 min-[1025px]:pt-0"
+        className="reveal relative flex  w-full items-center justify-center pt-[60px] min-[1025px]:w-1/2 min-[1025px]:pt-0"
       >
         <div className="absolute">
           <img
@@ -60,7 +76,10 @@ export default function Hero() {
             className="h-[330px] w-[400px] rounded-[20px] max-[1024px]:h-[264px] max-[1024px]:w-[320px]"
           />
         </div>
+       
       </div>
     </div>
+    
+
   );
 }

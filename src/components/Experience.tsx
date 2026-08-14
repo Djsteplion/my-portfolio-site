@@ -35,13 +35,13 @@ export default function Experience() {
               <button
                 key={item.id}
                 onClick={() => setActiveId(item.id)}
-                className={`flex h-5 items-center justify-between gap-2.5 rounded-lg px-5 py-[15px] text-base transition-colors duration-200 hover:cursor-pointer
+                className={`flex h-5 items-center justify-between gap-2.5 rounded-lg px-5 py-[15px] text-[12px] md:text-base transition-colors duration-200 hover:cursor-pointer
                   max-[1024px]:h-5 max-[1024px]:min-w-[120px] max-[1024px]:max-w-[120px]
                   max-[700px]:h-5 max-[700px]:min-w-[70px] max-[700px]:max-w-[70px] max-[700px]:rounded-[5px] max-[700px]:px-2 max-[700px]:py-[5px] max-[700px]:text-[12.52px] max-[700px]:leading-[1.5]
                   ${isActive ? 'bg-[var(--text-main)] text-[#6C63FF]' : 'bg-[var(--bg-color)] text-[var(--text-secondary)] hover:bg-[var(--text-main)] hover:text-[var(--bg-color)]'}
                 `}
               >
-                <p>{shortLabel}</p>
+                <p className='text-[10px] md:text-base'>{shortLabel}</p>
                 <span className={`max-[1024px]:hidden ${isActive ? '' : ''}`}>&#10095;</span>
               </button>
             );
@@ -49,7 +49,7 @@ export default function Experience() {
         </div>
       </div>
 
-      <div ref={contentRef} className="reveal is-visible mt-[50px] w-full min-[1025px]:ml-[150px] min-[1025px]:mt-[50px] min-[1025px]:w-auto max-[1024px]:mt-[30px] max-[1024px]:ml-0">
+      <div ref={contentRef}  key={activeId} className="reveal is-visible mt-[50px] w-full min-[1025px]:ml-[150px] min-[1025px]:mt-[50px] min-[1025px]:w-auto max-[1024px]:mt-[30px] max-[1024px]:ml-0">
         <div className="flex flex-row items-center">
           <h3 className="text-[22px] text-[var(--text-main)] max-[700px]:text-[17px]">{active.role}</h3>
           {active.companyUrl ? (

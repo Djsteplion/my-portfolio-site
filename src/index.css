@@ -82,3 +82,41 @@ body.light-theme .social-icon {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Scroll down button (on the hero section) */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 13px;
+  animation: scrollFloat 1.8s ease-in-out infinite;
+  backdrop-filter: blur(8px);
+}
+
+.scroll-arrow {
+  font-size: 18px;
+  animation: arrowMove 1s ease-in-out infinite;
+}
+
+@keyframes scrollFloat {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -6px); }
+}
+
+@keyframes arrowMove {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
