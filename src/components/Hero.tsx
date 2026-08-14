@@ -18,10 +18,10 @@ export default function Hero() {
           <h5 className="ml-2.5 text-xs font-normal tracking-[3px] text-[var(--text-secondary)]">MY NAME IS</h5>
         </div>
         <div className="mt-5 flex flex-row items-center justify-start max-[1024px]:justify-center max-[700px]:justify-start">
-          <h1 className="text-[48px] font-bold tracking-[-0.02em] text-[var(--text-main)] max-[330px]:text-[26px]">
+          <h1 className="md:text-[48px] font-bold tracking-[-0.02em] text-[var(--text-main)] max-[700px]:text-[17px]">
             Stephen
           </h1>
-          <h1 className="ml-2.5 text-[48px] font-bold tracking-[-0.02em] text-[#6C63FF] max-[330px]:text-[26px]">
+          <h1 className="ml-2.5 md:text-[48px] font-bold tracking-[-0.02em] text-[#6C63FF] max-[700px]:text-[17px]">
             Olayiwola
           </h1>
         </div>

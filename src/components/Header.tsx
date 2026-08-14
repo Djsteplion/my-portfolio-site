@@ -27,7 +27,7 @@ export default function Header({ onOpenMenu }: HeaderProps) {
       className={`fixed left-0 right-0 top-0 z-[3] flex flex-row items-center justify-between transition-all duration-300 ease-in-out ${
         scrolled
           ? 'fixed border-b border-white/10 bg-[var(--header-glass)] px-[10px] md:px-[20px] lg:px-[70px] py-[15px] backdrop-blur-[10px] max-[1024px]:px-[15px] max-[800px]:px-[5px] max-[800px]:pb-[5px] max-[00px]:pt-[15px]'
-          : 'bg-transparent px-[10px] md:px-[50px] py-5 max-[1024px]:px-[10px]'
+          : 'fixed bg-transparent px-[10px] md:px-[50px] py-5 max-[1024px]:px-[10px]'
       }`}
     >
       <a className="flex flex-row items-center gap-[5px] text-[22px] font-bold tracking-[-0.5px] no-underline max-[1024px]:text-[19px]" href="#">
