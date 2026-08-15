@@ -68,7 +68,7 @@ export default function Portfolio() {
         </div>
       </div>
 
-      <div className="mb-2.5 flex flex-row items-center justify-center gap-2.5">
+      <div className="mb-2.5 flex flex-row items-center justify-center gap-2.5 max-[500px]:flex-wrap">
         {filters.map((filter) => (
           <button
             key={filter.value}
