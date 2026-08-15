@@ -8,9 +8,10 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const filters: { label: string; value: FilterValue }[] = [
   { label: 'All', value: 'all' },
-  { label: 'Basic', value: 'basic' },
-  { label: 'Intermediate', value: 'intermediate' },
-  { label: 'Advanced', value: 'advanced' },
+  { label: 'Landing Pages', value: 'landing pages' },
+  { label: 'e-commerce', value: 'e-commerce' },
+  { label: 'SaaS', value: 'SaaS' },
+  { label: 'Finance & Crypto', value: 'crypto' },
 ];
 
 export default function Portfolio() {

@@ -3,7 +3,7 @@ import type { PortfolioItem } from '../types';
 export const portfolioItems: PortfolioItem[] = [
   {
     id: 'aria',
-    category: 'basic',
+    category: 'landing pages',
     image: '/images/portfolio 1.png',
     title: 'Aria Website',
     summary:
@@ -14,9 +14,9 @@ export const portfolioItems: PortfolioItem[] = [
     demoTitle: 'Aria Website',
     demoVideo: 'aria.mp4',
   },
-  {
+  /*
     id: 'celoraffle-pitch',
-    category: 'basic',
+    category: 'crypto',
     image: '/images/portfolio 11.png',
     title: 'CeloRaffle Pitch-Deck',
     summary:
@@ -26,10 +26,10 @@ export const portfolioItems: PortfolioItem[] = [
     viewLinkUrl: 'https://celo-raffle-pitch-deck.netlify.app/',
     demoTitle: 'CeloRaffle Pitch',
     demoVideo: 'celopitch.mp4',
-  },
+  */
   {
     id: 'leno',
-    category: 'basic',
+    category: 'landing pages',
     image: '/images/portfolio 2.jpg',
     title: 'Leno Website',
     summary:
@@ -42,7 +42,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'zwilt',
-    category: 'basic',
+    category: 'landing pages',
     image: '/images/portfolio 3.png',
     title: 'Zwilt Website',
     summary:
@@ -55,7 +55,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'agrohive',
-    category: 'advanced',
+    category: 'e-commerce',
     image: '/images/portfolio 4.png',
     title: 'AgroHive Mobile App',
     summary:
@@ -68,7 +68,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'brown-coffee',
-    category: 'intermediate',
+    category: 'e-commerce',
     image: '/images/portfolio 5.png',
     title: 'Brown-Coffee Mobile App',
     summary:
@@ -81,9 +81,9 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'fz-ecommerce',
-    category: 'intermediate',
+    category: 'e-commerce',
     image: '/images/portfolio 6.png',
-    title: 'FZ Ecommerce Site',
+    title: 'Food Zone',
     summary:
       'A fullstack E-commerce app with secure User Auth and a real-time Cart system. It handles conditional menu rendering for different times of day and provides a seamless CRUD interface for managing food orders.',
     languages: ['React.js', 'Typescript', 'Tailwind'],
@@ -94,7 +94,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'motifax',
-    category: 'advanced',
+    category: 'SaaS',
     image: '/images/portfolio 7.png',
     title: 'Ai-Powered Identifier',
     summary:
@@ -107,11 +107,11 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'crypto-intel',
-    category: 'intermediate',
+    category: 'crypto',
     image: '/images/portfolio 8.png',
     title: 'Crypto Intelligence Dashboard',
     summary:
-      'A real-time market intelligence terminal featuring live price streams and advanced data visualization. Built with React, it optimizes data fetching for high-frequency updates, providing a sleek, professional interface for tracking global crypto assets.',
+      'A real-time market intelligence terminal featuring live price streams and SaaS data visualization. Built with React, it optimizes data fetching for high-frequency updates, providing a sleek, professional interface for tracking global crypto assets.',
     languages: ['React.js', 'Typescript', 'Tailwind'],
     viewLinkLabel: 'View Site',
     viewLinkUrl: 'https://crypto-intelligence-dashboard.netlify.app/',
@@ -120,7 +120,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'finland-marine',
-    category: 'advanced',
+    category: 'SaaS',
     image: '/images/portfolio 9.png',
     title: 'Finland Marine Dashboard',
     summary:
@@ -133,7 +133,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'finance-tracker',
-    category: 'advanced',
+    category: 'crypto',
     image: '/images/portfolio 10.png',
     title: 'Finance Tracker App',
     summary:
@@ -146,14 +146,15 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'celoraffle-agent',
-    category: 'advanced',
+    category: 'SaaS',
     image: '/images/portfolio 12.png',
-    title: 'Celo Raffle Agent',
+    title: 'CeloRaffle Agent',
     summary:
       'A decentralized, transparent raffle system built on the Celo blockchain. It enables users to participate in provably fair lottery draws, where ticket purchases, winner selection, and prize distribution are handled automatically through smart contracts, ensuring trustless and secure participation for all users.',
     languages: ['Next.js', 'Solidity', 'Typescript', 'Tailwind'],
     viewLinkLabel: 'View Site',
-    viewLinkUrl: 'https://celo-raffle-agent.netlify.app/',
+    //viewLinkUrl: 'https://celo-raffle-agent.netlify.app/',
+    viewLinkUrl: 'https://celo-raffle-pitch-deck.netlify.app/',
     demoTitle: 'CeloRaffle Agent',
     demoVideo: 'celoraffle_agent.mp4',
   },

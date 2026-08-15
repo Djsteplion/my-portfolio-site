@@ -5,7 +5,7 @@ export interface ServiceItem {
   description: string;
 }
 
-export type ProjectCategory = 'basic' | 'intermediate' | 'advanced';
+export type ProjectCategory = 'basic' | 'intermediate' | 'advanced' | 'landing pages' | 'e-commerce' | 'SaaS' | 'crypto';
 
 export interface PortfolioItem {
   id: string;
