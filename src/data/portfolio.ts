@@ -4,7 +4,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 'aria',
     category: 'landing pages',
-    image: '/images/portfolio 1.png',
+    image: '/images/portfolio 1.jpg',
     title: 'Aria Website',
     summary:
       'A high-performance landing page designed for a creative agency. Features smooth scrolling animations, a fully responsive grid, and optimized assets for lightning-fast loading speeds.',
@@ -43,13 +43,13 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 'zwilt',
     category: 'landing pages',
-    image: '/images/portfolio 3.png',
+    image: '/images/portfolio 3.jpg',
     title: 'Zwilt Website',
     summary:
       'A premium talent marketplace built with React.js. It features a sophisticated, interactive UI for navigating vetted remote talent, a detailed recruitment journey workflow, and seamless responsive layouts.',
     languages: ['React.js', 'JavaScript'],
     viewLinkLabel: 'View Site',
-    viewLinkUrl: '#',
+    viewLinkUrl: 'https://zwilt-landing-page.netlify.app/',
     demoTitle: 'Zwilt Website',
     demoVideo: 'zwilt.mp4',
   },

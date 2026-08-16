@@ -10,7 +10,7 @@ function ServiceCard({ icon, title, description }: { icon: string; title: string
     >
       <img src={icon} alt="" className="h-[50px] w-[50px]" />
       <h3 className="mb-3 mt-3 text-lg font-bold text-[var(--bg-color)]">{title}</h3>
-      <p className="text-sm leading-[1.6] text-[#666666]">{description}</p>
+      <p className="text-sm leading-[1.6] text-[#a5a1a1]">{description}</p>
     </div>
   );
 }
