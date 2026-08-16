@@ -75,6 +75,13 @@ body.light-theme .social-icon {
   }
 }
 
+/* for shimmer effect on skeleton loaders */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* 3-line clamp for project summaries (used in Portfolio cards) */
 .line-clamp-3 {
   display: -webkit-box;
