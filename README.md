@@ -1,3 +1,3 @@
-# Stephen Olayiwola — Portfolio (React + TypeScript + Tailwind) .....
+# Stephen Olayiwola — Portfolio (React + TypeScript + Tailwind) .
 
 
