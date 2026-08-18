@@ -46,7 +46,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/images/portfolio 3.jpg',
     title: 'Zwilt Website',
     summary:
-      'A premium talent marketplace built with React.js. It features a sophisticated, interactive UI for navigating vetted remote talent, a detailed recruitment journey workflow, and seamless responsive layouts.',
+      'A premium talent marketplace landing page, built with React.js. It features a nice, interactive UI for showcasing vetted remote talent, a detailed recruitment journey workflow, and seamless responsive layouts.',
     languages: ['React.js', 'JavaScript'],
     viewLinkLabel: 'View Site',
     viewLinkUrl: 'https://zwilt-landing-page.netlify.app/',

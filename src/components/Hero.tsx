@@ -27,9 +27,8 @@ export default function Hero() {
         </div>
         <div className="mt-10">
           <p className="text-base leading-[1.8] text-[var(--text-secondary)]">
-            A front-end developer with four years of experience in tech communities and startups. Proficient in
-            Html, Css, Tailwind Css, Javascript, Typescript, React.js, Next.js, Dart and Flutter. Passionate about
-            coding appealing interfaces.
+            A Frontend Engineer with five years of experience in tech communities and startups. Proficient in
+            Html, Css, Tailwind, Javascript, Typescript, React.js, Next.js, Dart and Flutter.Experienced in frontend architecture, performance optimization, API integration and reusable component systems.
           </p>
         </div>
         <div className="mt-[35px] flex flex-row gap-2.5">
