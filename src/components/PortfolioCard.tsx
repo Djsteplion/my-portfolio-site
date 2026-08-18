@@ -19,7 +19,7 @@ export default function PortfolioCard({ item }: { item: PortfolioItem }) {
           src={item.image}
           alt={`${item.title} thumbnail`}
           onLoad={() => setImageLoaded(true)}
-          className={`absolute inset-0 top-0 left-0 bottom-0 min-h-full min-w-full object-contain transition-opacity duration-300 ${
+          className={`absolute top-[-10px] md:top-0 md:bottom-0 md:left-0 min-h-full min-w-full object-contain transition-opacity duration-300 ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           draggable={false}
