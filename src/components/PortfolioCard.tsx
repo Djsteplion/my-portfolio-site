@@ -26,12 +26,12 @@ export default function PortfolioCard({ item }: { item: PortfolioItem }) {
         />
       </div>
 
-      <div className="flex h-full w-full flex-col items-start bg-[var(--text-main)] p-5">
-        <h4 className="mb-1 text-xl font-bold tracking-[-0.01em] text-[var(--bg-color)]">
+      <div className="flex h-full w-full flex-col items-start bg-[var(--card-bg)] p-5">
+        <h4 className="mb-1 text-xl font-bold tracking-[-0.01em] text-[var(--text-main)]">
           {item.title}
         </h4>
 
-        <p className="mb-4 line-clamp-3 text-sm leading-[1.6] text-[#888888]">
+        <p className="mb-4 line-clamp-3 text-sm leading-[1.6] text-[var(--portfolio-summary-text)]">
           {item.summary}
         </p>
 
@@ -39,7 +39,7 @@ export default function PortfolioCard({ item }: { item: PortfolioItem }) {
           {item.languages.map((lang) => (
             <span
               key={lang}
-              className="rounded-xl border border-[#b0b0b0] px-1.5 py-1 text-xs font-medium text-[#666666]"
+              className="rounded-xl border border-[#b0b0b0] px-1.5 py-1 text-xs font-medium text-[var(--portfolio-lang)]"
             >
               {lang}
             </span>

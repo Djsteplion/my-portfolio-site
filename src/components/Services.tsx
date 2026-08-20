@@ -6,11 +6,11 @@ function ServiceCard({ icon, title, description }: { icon: string; title: string
   return (
     <div
       ref={ref}
-      className="reveal flex h-[300px] w-[300px] md:h-[320px] md:w-[360px] flex-col items-center rounded-xl bg-[var(--text-main)] p-10  text-center shadow-[0px_10px_30px_rgba(0,0,0,0.1)] max-[1024px]:w-[500px] max-[700px]:w-[100%] max-[700px]:mx-[15px]"
+      className="reveal flex h-[300px] w-[300px] md:h-[320px] md:w-[360px] flex-col items-center rounded-xl bg-[var(--service-bg)] p-10  text-center shadow-[0px_10px_30px_rgba(0,0,0,0.1)] max-[1024px]:w-[500px] max-[700px]:w-[100%] max-[700px]:mx-[15px]"
     >
       <img src={icon} alt="" className="h-[50px] w-[50px]" />
-      <h3 className="mb-3 mt-3 text-lg font-bold text-[var(--bg-color)]">{title}</h3>
-      <p className="text-sm leading-[1.6] text-[#a5a1a1]">{description}</p>
+      <h3 className="mb-3 mt-3 text-lg font-bold text-[var(--text-main)]">{title}</h3>
+      <p className="text-sm leading-[1.6] text-[var(--service-text)]">{description}</p>
     </div>
   );
 }

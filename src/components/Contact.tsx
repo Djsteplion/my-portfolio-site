@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="w-full box-border rounded-[20px] border border-[#333] bg-[#1a1a1a] p-10">
           <div className="mb-5 flex w-full flex-row items-center gap-2.5">
             <div className="h-2.5 w-2.5 animate-pulseDot rounded-full bg-[#22c55e] shadow-[0_0_8px_#22c55e]" />
-            <p className="pt-[25px]">Available for new projects</p>
+            <p className="text-white pt-[25px]">Available for new projects</p>
           </div>
           <h3 className="mb-[15px] text-[28px] text-white">Let's work together!</h3>
           <p className="mb-[25px] leading-[1.6] text-[#999]">

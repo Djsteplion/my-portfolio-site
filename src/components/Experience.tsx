@@ -65,7 +65,7 @@ export default function Experience() {
             <span className="ml-2.5 text-[22px] text-[var(--text-main)] max-[700px]:text-xs">{active.company}</span>
           )}
         </div>
-        <p className="my-2.5 text-sm text-[#999999]">{active.location}</p>
+       {/* <p className="my-2.5 text-sm text-[#999999]">{active.location}</p>*/ }
         <p className="pt-2.5 text-sm text-[#999999]">{active.timeFrame}</p>
 
         <div className="my-[15px] flex flex-row flex-wrap items-center gap-2.5">

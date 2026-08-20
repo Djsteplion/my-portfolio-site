@@ -5,14 +5,18 @@
 :root {
   --bg-color: #111111;
   --text-main: #ffffff;
-  --text-secondary: #a1a1a1;
-  --card-bg: #ffffff;
+  --text-secondary: #ffffffe8;
+  --card-bg: #111111;
   --card-text: #111111;
   --header-glass: rgba(17, 17, 17, 0.8);
   --resume-border: #444444;
   --link-color: rgba(255, 255, 255, 1);
   --menu-link-color: rgba(255, 255, 255, 1);
   --menu-icon-color: white;
+  --service-text: #ffffffd6;
+  --service-bg: #1d1d1f;
+  --portfolio-summary-text: #d9dbdfe0;
+  --portfolio-lang:  rgb(255 255 255 / 80%);
 }
 
 body.light-theme {
@@ -26,6 +30,10 @@ body.light-theme {
   --link-color: rgba(17, 17, 17, 1);
   --menu-link-color: rgba(255, 255, 255, 1);
   --menu-icon-color: black;
+  --service-text: #111111de;
+  --service-bg: #f9f9ff;
+  --portfolio-summary-text: #444444; 
+  --portfolio-lang: rgb(17 17 17 / 80%);
 }
 
 * {
@@ -122,8 +130,4 @@ body.light-theme .social-icon {
 @keyframes arrowMove {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(5px); }
-}
-
-html {
-  scroll-behavior: smooth;
 }
