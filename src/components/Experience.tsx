@@ -38,7 +38,7 @@ export default function Experience() {
                 className={`flex h-5 items-center justify-between gap-2.5 rounded-lg px-5 py-[15px] text-[12px] md:text-base transition-colors duration-200 hover:cursor-pointer
                   max-[1024px]:h-5 max-[1024px]:min-w-[120px] max-[1024px]:max-w-[120px]
                   max-[700px]:h-5 max-[700px]:min-w-[70px] max-[700px]:max-w-[70px] max-[700px]:rounded-[5px] max-[700px]:px-2 max-[700px]:py-[5px] max-[700px]:text-[12.52px] max-[700px]:leading-[1.5]
-                  ${isActive ? 'bg-[var(--text-main)] text-[#6C63FF]' : 'bg-[var(--bg-color)] text-[var(--text-secondary)] hover:bg-[var(--text-main)] hover:text-[var(--bg-color)]'}
+                  ${isActive ? 'bg-[var(--exp-bg-color)] text-[#d48cd4]' : 'bg-[var(--bg-color)] text-[var(--text-secondary)] hover:bg-[var(--text-main)] hover:text-[var(--bg-color)]'}
                 `}
               >
                 <p className='text-[10px] md:text-base'>{shortLabel}</p>

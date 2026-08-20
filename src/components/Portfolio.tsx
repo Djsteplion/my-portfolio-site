@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { usePostHog } from "@posthog/react";
 import { portfolioItems } from '../data/portfolio';
 import type { FilterValue } from '../types';
 import { useCarousel } from '../hooks/useCarousel';
@@ -18,6 +19,7 @@ export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState<FilterValue>('all');
   const headerRef = useScrollReveal<HTMLDivElement>();
   const containerRef = useScrollReveal<HTMLDivElement>();
+  const posthog = usePostHog();
 
   const filteredItems = useMemo(
     () => (activeFilter === 'all' ? portfolioItems : portfolioItems.filter((item) => item.category === activeFilter)),
@@ -72,7 +74,10 @@ export default function Portfolio() {
         {filters.map((filter) => (
           <button
             key={filter.value}
-            onClick={() => setActiveFilter(filter.value)}
+            onClick={() => {
+              setActiveFilter(filter.value)
+              posthog.capture(`The filter ${filter.label} tab has been clicked, on the PORTFOLIO SECTION in my PORTFOLIO WEBSITE`);
+            }}
             className={`rounded-[20px] border px-[15px] py-1.5 text-[13px] transition-all duration-300 hover:cursor-pointer ${
               activeFilter === filter.value
                 ? 'border-[#6C63FF] bg-[#6C63FF] text-white'

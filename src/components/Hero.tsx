@@ -1,8 +1,20 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { usePostHog } from "@posthog/react";
 
 export default function Hero() {
   const textRef = useScrollReveal<HTMLDivElement>();
   const imageRef = useScrollReveal<HTMLDivElement>();
+  const posthog = usePostHog();
+
+  posthog.capture("My portfolio website has been visited");
+
+  const alertMyLinkedin = () => {
+    posthog.capture("My Linkedin link has just been clicked, from the HERO SECTION in my PORTFOLIO WEBSITE");
+  }
+
+  const alertMyGithub = () => {
+    posthog.capture("My Github Account link has just been clicked, from the HERO SECTION in my PORTFOLIO WEBSITE");
+  }
 
   return (
     <div
@@ -32,10 +44,10 @@ export default function Hero() {
           </p>
         </div>
         <div className="mt-[35px] flex flex-row gap-2.5">
-          <a href="https://github.com/Djsteplion">
+          <a href="https://github.com/Djsteplion" onClick={alertMyGithub}>
             <img src="/images/Github (1).png" alt="Github handle" className="social-icon h-5 w-5 opacity-70 [filter:brightness(0)_invert(1)] hover:opacity-100" />
           </a>
-          <a href="https://ng.linkedin.com/in/stephen-olayiwola-3a86211b7">
+          <a href="https://ng.linkedin.com/in/stephen-olayiwola-3a86211b7" onClick={alertMyLinkedin}>
             <img src="/images/Linkedin (1).png" alt="Linkedin handle" className="social-icon h-5 w-5 opacity-70 [filter:brightness(0)_invert(1)] hover:opacity-100" />
           </a>
         </div>

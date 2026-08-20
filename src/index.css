@@ -5,6 +5,7 @@
 :root {
   --bg-color: #111111;
   --text-main: #ffffff;
+  --exp-bg-color: #ffffff;
   --text-secondary: #ffffffe8;
   --card-bg: #111111;
   --card-text: #111111;
@@ -22,6 +23,7 @@
 body.light-theme {
   --bg-color: #f5f5f7;
   --text-main: #1d1d1f;
+  --exp-bg-color: black;
   --text-secondary: #424245;
   --card-bg: #ffffff;
   --card-text: #111111;
@@ -131,3 +133,8 @@ body.light-theme .social-icon {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(5px); }
 }
+
+
+
+
+  

@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import type { PortfolioItem } from '../types';
+import { usePostHog } from "@posthog/react";
 
 export default function PortfolioCard({ item }: { item: PortfolioItem }) {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const posthog = usePostHog();
 
   return (
     <div className="flex h-full select-none flex-col overflow-hidden rounded-xl border border-[var(--resume-border)] bg-[var(--card-bg)] transition-all duration-[400ms] ease-in-out hover:cursor-pointer hover:shadow-[0_30px_80px_rgba(255,255,255,0.4)]">
@@ -50,6 +52,9 @@ export default function PortfolioCard({ item }: { item: PortfolioItem }) {
           href={item.viewLinkUrl}
           target="_blank"
           rel="noreferrer"
+          onClick={() => {
+            posthog.capture(`This site ${item.title}  at ${item.viewLinkUrl} has just been clicked, from the PROJECTS SECTION in my PORTFOLIO WEBSITE`);
+          }}
           className="mt-2.5 flex w-fit flex-row items-center rounded-xl border border-[#b0b0b0] px-2.5 py-[5px] no-underline transition-transform duration-300 hover:cursor-pointer"
         >
           <img src="/images/Link (1).png" alt="site-link icon" className="h-2.5 w-5" />
