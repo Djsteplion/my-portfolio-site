@@ -6,8 +6,7 @@ export default function Hero() {
   const imageRef = useScrollReveal<HTMLDivElement>();
   const posthog = usePostHog();
 
-  posthog.capture("My portfolio website has been visited");
-
+  
   const alertMyLinkedin = () => {
     posthog.capture("My Linkedin link has just been clicked, from the HERO SECTION in my PORTFOLIO WEBSITE");
   }

@@ -16,6 +16,7 @@
   --menu-icon-color: white;
   --service-text: #ffffffd6;
   --service-bg: #1d1d1f;
+  --company-label: #44397a;
   --portfolio-summary-text: #d9dbdfe0;
   --portfolio-lang:  rgb(255 255 255 / 80%);
 }
@@ -34,6 +35,7 @@ body.light-theme {
   --menu-icon-color: black;
   --service-text: #111111de;
   --service-bg: #f9f9ff;
+  --company-label: #d48cd4;
   --portfolio-summary-text: #444444; 
   --portfolio-lang: rgb(17 17 17 / 80%);
 }
