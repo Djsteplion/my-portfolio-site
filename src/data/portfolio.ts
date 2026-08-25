@@ -85,10 +85,10 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/images/portfolio 6.png',
     title: 'Food Zone',
     summary:
-      'A fullstack E-commerce app with secure User Auth and a real-time Cart system. It handles conditional menu rendering for different times of day and provides a seamless CRUD interface for managing food orders.',
+      'A fullstack E-commerce app with secure User Auth, integrated payment system, a real-time Cart system & many more. It handles conditional menu rendering for different times of day and provides a seamless CRUD interface for managing food orders.',
     languages: ['React.js', 'Typescript', 'Tailwind'],
     viewLinkLabel: 'View Site',
-    viewLinkUrl: 'https://fz-food-zone.netlify.app/',
+    viewLinkUrl: 'https://food-zone-xum.netlify.app/',
     demoTitle: 'FoodZone Website',
     demoVideo: 'foodzone.mp4',
   },
@@ -98,7 +98,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/images/portfolio 7.png',
     title: 'Ai-Powered Identifier',
     summary:
-      'A world-first Design Identifier AI that analyzes pattern DNA. Built with Next.js, it uses a neural engine to detect symmetry and historical origins, automatically classifying motifs into distinct cultural and geometric taxonomies.',
+      'A Design Identifier AI that analyzes pattern DNA. Built with Next.js, it uses a neural engine to detect symmetry and historical origins, automatically classifying motifs into distinct cultural and geometric taxonomies.',
     languages: ['Next.js', 'Typescript', 'Tailwind'],
     viewLinkLabel: 'View Site',
     viewLinkUrl: 'https://motifax.netlify.app/',
