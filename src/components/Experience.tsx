@@ -30,7 +30,14 @@ export default function Experience() {
         >
           {experienceItems.map((item) => {
             const isActive = item.id === activeId;
-            const shortLabel = item.company === 'ATC-AFRICA' ? 'Atc Africa' : item.company === 'SABO' ? 'Sabo' : 'Jojega';
+            const shortLabel =
+              item.company === 'CreatorRealm'
+                ? 'CreatorRealm'
+                : item.company === 'ATC-AFRICA'
+                  ? 'Atc Africa'
+                  : item.company === 'SABO'
+                    ? 'Sabo'
+                    : 'Jojega';
             return (
               <button
                 key={item.id}
