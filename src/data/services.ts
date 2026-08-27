@@ -6,7 +6,7 @@ export const services: ServiceItem[] = [
     icon: '/images/Icon (5).png',
     title: 'Web Development',
     description:
-      "Crafting high-performance, SEO-friendly web applications using React.js and Next.js. I focus on building scalable architectures with clean, maintainable JavaScript and TypeScript code.",
+      "Crafting high-performance, SEO-friendly web applications using React.js and Next.js, with a focus on scalable architectures and clean, maintainable JavaScript and TypeScript code.",
   },
   {
     id: 'mobile-dev',
