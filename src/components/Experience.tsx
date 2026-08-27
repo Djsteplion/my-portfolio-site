@@ -48,7 +48,7 @@ export default function Experience() {
                   ${isActive ? 'bg-[var(--exp-bg-color)] text-[var(--company-label)]' : 'bg-[var(--bg-color)] text-[var(--text-secondary)] hover:bg-[var(--text-main)] hover:text-[var(--bg-color)]'}
                 `}
               >
-                <p className='text-[14px] md:text-base'>{shortLabel}</p>
+                <p className='text-[10px] md:text-base'>{shortLabel}</p>
                 <span className={`max-[1024px]:hidden ${isActive ? '' : ''}`}>&#10095;</span>
               </button>
             );
