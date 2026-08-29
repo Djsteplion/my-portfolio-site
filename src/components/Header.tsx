@@ -17,31 +17,46 @@ export default function Header({ onOpenMenu }: HeaderProps) {
   const scrolled = useScrolled(50);
   const { theme, toggleTheme } = useTheme();
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelector(href)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+
+    window.history.replaceState(null, '', href);
   };
 
   return (
-    <div
+    <header
       className={`fixed left-0 right-0 top-0 z-[3] flex flex-row items-center justify-between transition-all duration-300 ease-in-out ${
         scrolled
-          ? 'fixed border-b border-white/10 bg-[var(--header-glass)] px-[10px] md:px-[20px] lg:px-[70px] py-[15px] backdrop-blur-[10px] max-[1024px]:px-[15px] max-[800px]:px-[5px] max-[800px]:pb-[5px] max-[00px]:pt-[15px]'
-          : 'fixed bg-transparent px-[10px] md:px-[50px] py-5 max-[1024px]:px-[10px]'
+          ? 'fixed border-b border-white/10 bg-[var(--header-glass)] px-[10px] py-[15px] backdrop-blur-[10px] md:px-[20px] lg:px-[70px] max-[1024px]:px-[15px] max-[800px]:px-[5px] max-[800px]:pb-[5px] max-[800px]:pt-[15px]'
+          : 'fixed bg-transparent px-[10px] py-5 md:px-[50px] max-[1024px]:px-[10px]'
       }`}
     >
-      <a className="flex flex-row items-center gap-[5px] text-[22px] font-bold tracking-[-0.5px] no-underline max-[1024px]:text-[19px]" href="#">
+      <a
+        className="flex flex-row items-center gap-[5px] text-[22px] font-bold tracking-[-0.5px] no-underline max-[1024px]:text-[19px]"
+        href="/"
+        aria-label="Stephen Olayiwola — Home"
+      >
         <span className="text-logoAccent">Stephen</span>
         <span className="text-[var(--text-main)]">Olayiwola</span>
       </a>
 
-      <nav className="hidden flex-row items-center justify-between min-[701px]:flex">
+      <nav
+        className="hidden flex-row items-center justify-between min-[701px]:flex"
+        aria-label="Primary navigation"
+      >
         {links.map((link) => (
           <a
             key={link.href}
             href={link.href}
             onClick={(e) => handleLinkClick(e, link.href)}
-            className="px-2.5 text-sm font-medium tracking-[0.5px] text-[var(--link-color)] opacity-70 transition-opacity duration-300 hover:cursor-pointer hover:opacity-100 max-[1024px]:px-2 max-[1024px]:text-xs"
+            className="px-2.5 text-sm font-medium tracking-[0.5px] text-[var(--link-color)] opacity-70 transition-opacity duration-300 hover:cursor-pointer hover:opacity-100 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--text-main)] max-[1024px]:px-2 max-[1024px]:text-xs"
           >
             {link.label}
           </a>
@@ -49,30 +64,54 @@ export default function Header({ onOpenMenu }: HeaderProps) {
       </nav>
 
       <div className="hidden flex-row items-center justify-center min-[701px]:flex">
-        <button onClick={toggleTheme} className="flex h-5 w-5 items-center justify-center" aria-label="Toggle theme">
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className="flex h-5 w-5 items-center justify-center rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--text-main)]"
+          aria-label={
+            theme === 'light'
+              ? 'Switch to dark mode'
+              : 'Switch to light mode'
+          }
+          title={
+            theme === 'light'
+              ? 'Switch to dark mode'
+              : 'Switch to light mode'
+          }
+        >
           <img
-            src={theme === 'light' ? '/images/sun (1).png' : '/images/moon (1).png'}
-            alt={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+            src={
+              theme === 'light'
+                ? '/images/sun (1).png'
+                : '/images/moon (1).png'
+            }
+            alt=""
+            aria-hidden="true"
+            width={20}
+            height={20}
             className="h-full w-full"
           />
         </button>
+
         <a
           href="/images/Stephen-Olayiwola-Resume.pdf"
-          download="Stephen_Olayiwola_Resume"
-          className="ml-[15px] flex items-center justify-center rounded-md border border-[var(--resume-border)] px-6 py-2.5 text-xs text-[var(--text-main)] no-underline"
+          download="Stephen_Olayiwola_Resume.pdf"
+          className="ml-[15px] flex items-center justify-center rounded-md border border-[var(--resume-border)] px-6 py-2.5 text-xs text-[var(--text-main)] no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--text-main)]"
+          aria-label="Download Stephen Olayiwola's resume as a PDF"
         >
           Resume
         </a>
       </div>
 
-      <div
+      <button
+        type="button"
         onClick={onOpenMenu}
-        className="hidden text-xl text-[var(--menu-icon-color)] min-[701px]:hidden max-[700px]:block"
-        role="button"
-        aria-label="Open menu"
+        className="hidden border-0 bg-transparent p-1 text-xl text-[var(--menu-icon-color)] min-[701px]:hidden max-[700px]:block focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--text-main)]"
+        aria-label="Open navigation menu"
+        aria-haspopup="true"
       >
-        &#9776;
-      </div>
-    </div>
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+    </header>
   );
 }

@@ -22,43 +22,43 @@ export const experienceItems: ExperienceItem[] = [
   responsibilities: [
     'Engineered responsive, production-ready frontend experiences using React, TypeScript, Tailwind CSS, and custom CSS across CreatorRealm’s creator, client, marketplace, communication, and financial workflows.',
 
-    'Designed and implemented custom animations, interactions, and visual experiences specifically for CreatorRealm across multiple pages, including the landing page, using React, Tailwind CSS, and CSS animations.',
+    'Architected and developed a feature-rich multi-role chat application with role-specific interfaces for clients and creators, keeping shared conversations and communication state synchronized across the platform.',
 
-    'Reworked and implemented onboarding flows, integrating REST APIs to fetch and submit user data while handling asynchronous states, validation, errors, and successful submissions.',
+    'Integrated frontend applications with REST APIs and real-time services, handling asynchronous data, loading states, error handling, authentication-related flows, and synchronized application state across complex product workflows.',
 
-    'Architected and developed a feature-rich multi-role chat application with role-specific interfaces and functionality for clients and creators while keeping shared conversations and communication state synchronized.',
+    'Implemented payment and financial workflows with Flutterwave, including backend-verified transaction handling and a custom downloadable payment receipt system, alongside wallet, deposit, withdrawal, escrow, and contract-related interfaces.',
 
-    'Built advanced chat functionality including an in-chat calculator, calendar, contextual shortcut actions, and quick-access controls for viewing the other participant’s profile, proposals, jobs, contracts, location, ratings, and related information.',
+    'Built and refined complex product workflows spanning onboarding, identity verification, jobs, proposals, contracts, milestones, marketplace experiences, creator profiles, notifications, and administrative interfaces while translating business requirements into intuitive, scalable UI.',
+
+    'Designed and implemented custom animations, interactions, and visual experiences across CreatorRealm, including onboarding and core product interfaces, using React, Tailwind CSS, and CSS animations.',
+
+    'Built advanced chat functionality including an in-chat calculator, calendar, contextual shortcuts, and quick-access controls for viewing participant profiles, proposals, jobs, contracts, locations, ratings, and related information.',
 
     'Implemented real-time chat interfaces with conversation lists, unread-message indicators, responsive layouts, and efficient navigation across active conversations.',
 
     'Developed a restricted-words mechanism that detects prohibited terms in outgoing messages, prevents restricted messages from being sent, and provides contextual warnings to users.',
 
-    'Implemented notifications functionality to surface relevant user and platform events across the application while integrating frontend state with backend API data.',
+    'Reworked onboarding flows by integrating REST APIs to fetch and submit user data while handling asynchronous states, validation, errors, and successful submissions.',
 
-    'Built identity-verification interfaces that collect required user information, submit verification data to backend services, and reflect real-time verification status as submissions are reviewed by administrators.',
+    'Implemented notifications functionality to surface relevant user and platform events while synchronizing frontend state with backend API data.',
 
-    'Developed job-management interfaces with tabbed views for all jobs, recent jobs, and matched jobs, incorporating API-driven data, pagination, filtering, and responsive UI states where required.',
+    'Built identity-verification interfaces that collect required user information, submit verification data to backend services, and reflect verification status as submissions are reviewed by administrators.',
 
-    'Implemented client offer workflows allowing creators to review offers and accept or reject them, with frontend state and API interactions reflecting the resulting workflow status.',
+    'Developed job-management interfaces with tabbed views for all jobs, recent jobs, and matched jobs, incorporating API-driven data, pagination, filtering, and responsive UI states.',
+
+    'Implemented client offer workflows allowing creators to review offers and accept or reject them, with frontend state and API interactions reflecting resulting workflow statuses.',
 
     'Built project and milestone-based contract interfaces supporting contract submission, resubmission, status tracking, and related workflow states across different contract types.',
 
     'Developed wallet functionality allowing users to view financial information including available balances and interact with deposit and withdrawal workflows through backend-integrated interfaces.',
 
-    'Implemented payment-related frontend functionality with Flutterwave, including a custom receipt-generation component that verifies successful transactions through the backend before generating a polished, downloadable payment receipt.',
-
-    'Developed and refined contract, proposal, escrow, job, creator-profile, marketplace, and financial interfaces, translating complex business workflows into intuitive user experiences.',
-
     'Contributed to the development of the administrative dashboard by implementing portions of the frontend UI alongside another frontend engineer.',
 
     'Built reusable components and frontend interaction patterns across the platform, improving consistency, maintainability, and development efficiency across multiple product areas.',
 
-    'Integrated frontend applications with REST APIs and real-time services, handling asynchronous data, loading states, error handling, authentication-related flows, and synchronized application state.',
-
     'Optimized frontend performance and loading behavior through efficient rendering, component-level optimization, asset handling, and responsive implementation practices.',
 
-    'Collaborated with product and engineering requirements to debug issues, refine existing functionality, and continuously improve the usability, reliability, and performance of the platform.'
+    'Collaborated with product and engineering requirements to debug issues, refine existing functionality, and continuously improve the usability, reliability, and performance of the platform.',
   ],
 },
 

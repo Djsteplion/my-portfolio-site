@@ -1,66 +1,97 @@
 import { useState } from 'react';
-import type { PortfolioItem } from '../types';
-import { usePostHog } from "@posthog/react";
+import { usePostHog } from '@posthog/react';
 
-export default function PortfolioCard({ item }: { item: PortfolioItem }) {
+import type { PortfolioItem } from '../types';
+
+interface PortfolioCardProps {
+  item: PortfolioItem;
+}
+
+export default function PortfolioCard({ item }: PortfolioCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const posthog = usePostHog();
 
+  const handleProjectClick = () => {
+    posthog.capture(
+      `This site ${item.title} at ${item.viewLinkUrl} has just been clicked, from the PROJECTS SECTION in my PORTFOLIO WEBSITE`,
+    );
+  };
+
   return (
-    <div className="flex h-full select-none flex-col overflow-hidden rounded-xl border border-[var(--resume-border)] bg-[var(--card-bg)] transition-all duration-[400ms] ease-in-out hover:cursor-pointer hover:shadow-[0_30px_80px_rgba(255,255,255,0.4)]">
-      
-      {/* Image with skeleton loader */}
+    <article className="flex h-full select-none flex-col overflow-hidden rounded-xl border border-[var(--resume-border)] bg-[var(--card-bg)] transition-all duration-[400ms] ease-in-out hover:cursor-pointer hover:shadow-[0_30px_80px_rgba(255,255,255,0.4)]">
       <div className="relative h-[160px] min-h-[160px] w-full shrink-0 overflow-hidden bg-[var(--card-bg)]">
         {!imageLoaded && (
-          <div className="absolute inset-0 z-10 overflow-hidden bg-[var(--card-bg)]">
+          <div
+            className="absolute inset-0 z-10 overflow-hidden bg-[var(--card-bg)]"
+            aria-hidden="true"
+          >
             <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-[var(--resume-border)] to-transparent" />
           </div>
         )}
 
         <img
           src={item.image}
-          alt={`${item.title} thumbnail`}
+          alt={`${item.title} project preview`}
+          width={640}
+          height={360}
+          loading="lazy"
+          decoding="async"
           onLoad={() => setImageLoaded(true)}
-          className={`absolute top-[-6px] md:top-0 md:bottom-0 md:left-0 min-h-full min-w-full object-contain transition-opacity duration-300 ${
+          onError={() => setImageLoaded(true)}
+          draggable={false}
+          className={`absolute top-[-6px] min-h-full min-w-full object-contain transition-opacity duration-300 md:bottom-0 md:left-0 md:top-0 ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          draggable={false}
         />
       </div>
 
       <div className="flex h-full w-full flex-col items-start bg-[var(--card-bg)] p-5">
-        <h4 className="mb-1 text-xl font-bold tracking-[-0.01em] text-[var(--text-main)]">
+        <h3 className="mb-1 text-xl font-bold tracking-[-0.01em] text-[var(--text-main)]">
           {item.title}
-        </h4>
+        </h3>
 
         <p className="mb-4 line-clamp-3 text-sm leading-[1.6] text-[var(--portfolio-summary-text)]">
           {item.summary}
         </p>
 
-        <div className="mt-auto flex flex-wrap gap-2">
+        <ul
+          className="mt-auto flex flex-wrap gap-2"
+          aria-label={`${item.title} technologies`}
+        >
           {item.languages.map((lang) => (
-            <span
+            <li
               key={lang}
-              className="rounded-xl border border-[#b0b0b0] px-1.5 py-1 text-xs font-medium text-[var(--portfolio-lang)]"
+              className="list-none rounded-xl border border-[#b0b0b0] px-1.5 py-1 text-xs font-medium text-[var(--portfolio-lang)]"
             >
               {lang}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <a
           href={item.viewLinkUrl}
           target="_blank"
-          rel="noreferrer"
-          onClick={() => {
-            posthog.capture(`This site ${item.title}  at ${item.viewLinkUrl} has just been clicked, from the PROJECTS SECTION in my PORTFOLIO WEBSITE`);
-          }}
-          className="mt-2.5 flex w-fit flex-row items-center rounded-xl border border-[#b0b0b0] px-2.5 py-[5px] no-underline transition-transform duration-300 hover:cursor-pointer"
+          rel="noopener noreferrer"
+          onClick={handleProjectClick}
+          aria-label={`${item.viewLinkLabel}: ${item.title} (opens in a new tab)`}
+          className="mt-2.5 flex w-fit flex-row items-center rounded-xl border border-[#b0b0b0] px-2.5 py-[5px] no-underline transition-transform duration-300 hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6C63FF]"
         >
-          <img src="/images/Link (1).png" alt="site-link icon" className="h-2.5 w-5" />
-          <span className="pl-2.5 text-xs text-[#8f8c8c]">{item.viewLinkLabel}</span>
+          <img
+            src="/images/Link (1).png"
+            alt=""
+            aria-hidden="true"
+            width={20}
+            height={10}
+            loading="lazy"
+            decoding="async"
+            className="h-2.5 w-5"
+          />
+
+          <span className="pl-2.5 text-xs text-[#8f8c8c]">
+            {item.viewLinkLabel}
+          </span>
         </a>
       </div>
-    </div>
+    </article>
   );
 }
