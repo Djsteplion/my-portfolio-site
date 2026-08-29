@@ -52,7 +52,7 @@ export default function Experience() {
 
         <div
           ref={tabsRef}
-          className="reveal mt-[100px] flex flex-row flex-wrap items-center gap-[10px] md:gap-[30px] max-[1024px]:mt-[70px] max-[1024px]:w-full max-[1024px]:!items-center max-[700px]:mt-[30px]"
+          className="reveal mt-[100px] flex flex-row flex-wrap items-center gap-[5px] md:gap-[30px] max-[1024px]:mt-[70px] max-[1024px]:w-full max-[1024px]:!items-center max-[700px]:mt-[30px]"
           role="tablist"
           aria-label="Work experience companies"
         >
@@ -81,7 +81,7 @@ export default function Experience() {
                 aria-controls={panelId}
                 tabIndex={isActive ? 0 : -1}
                 onClick={() => setActiveId(item.id)}
-                className={`flex h-5 min-w-fit items-center justify-center gap-2.5 rounded-lg px-10 py-[15px] text-[14px] transition-colors duration-200 hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6C63FF] md:text-base max-[1024px]:min-w-[120px] max-[1024px]:max-w-[120px] max-[700px]:h-5 max-[700px]:min-w-[70px] max-[700px]:max-w-[100px] max-[700px]:rounded-[2.5px] max-[700px]:px-4 max-[700px]:py-[5px] max-[700px]:text-[12.52px] max-[700px]:leading-[1.5] ${
+                className={`flex h-5 min-w-fit items-center justify-center gap-2.5 rounded-lg px-10 py-[15px] text-[14px] transition-colors duration-200 hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6C63FF] md:text-base max-[1024px]:min-w-[120px] max-[1024px]:max-w-[120px] max-[700px]:h-5 max-[700px]:min-w-[70px] max-[700px]:max-w-[90px] max-[700px]:rounded-[2.5px] max-[700px]:px-4 max-[700px]:py-[5px] max-[700px]:text-[12.52px] max-[700px]:leading-[1.5] ${
                   isActive
                     ? 'bg-[var(--exp-bg-color)] text-[var(--company-label)]'
                     : 'bg-[var(--bg-color)] text-[var(--text-secondary)] hover:bg-[var(--text-main)] hover:text-[var(--bg-color)]'
