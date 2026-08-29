@@ -81,7 +81,7 @@ export default function Hero() {
         </div>
         <div className="relative z-[2]">
           <img
-            src="/images/Stephen_Olayiwola.png"
+            src="/images/Stephen_Olayiwola.webp"
             alt="Stephen Olayiwola's Profile Picture"
             className="h-[330px] w-[400px] rounded-[20px] max-[1024px]:h-[264px] max-[1024px]:w-[320px]"
           />
