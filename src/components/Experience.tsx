@@ -26,7 +26,7 @@ export default function Experience() {
 
         <div
           ref={tabsRef}
-          className="reveal mt-[100px] flex flex-row sm:flex-wrap items-center gap-[30px] max-[1024px]:mt-[70px] max-[1024px]:w-full max-[1024px]:!items-center max-[700px]:mt-[30px]"
+          className="reveal mt-[100px] flex flex-row flex-wrap items-center  gap-[10px] md:gap-[30px] max-[1024px]:mt-[70px] max-[1024px]:w-full max-[1024px]:!items-center max-[700px]:mt-[30px]"
         >
           {experienceItems.map((item) => {
             const isActive = item.id === activeId;
@@ -42,13 +42,13 @@ export default function Experience() {
               <button
                 key={item.id}
                 onClick={() => setActiveId(item.id)}
-                className={`flex h-5 items-center justify-center gap-2.5 rounded-lg px-6 py-[15px] text-[14px] min-w-fit md:text-base transition-colors duration-200 hover:cursor-pointer
+                className={`flex h-5 items-center justify-center gap-2.5 rounded-lg px-10 py-[15px] text-[14px] min-w-fit md:text-base transition-colors duration-200 hover:cursor-pointer
                   max-[1024px]:h-5 max-[1024px]:min-w-[120px] max-[1024px]:max-w-[120px]
-                  max-[700px]:h-5 max-[700px]:min-w-[70px] max-[700px]:max-w-[70px] max-[700px]:rounded-[5px] max-[700px]:px-2 max-[700px]:py-[5px] max-[700px]:text-[12.52px] max-[700px]:leading-[1.5]
+                  max-[700px]:h-5 max-[700px]:min-w-[70px] max-[700px]:max-w-[100px] max-[700px]:rounded-[2.5px] max-[700px]:px-4 max-[700px]:py-[5px] max-[700px]:text-[12.52px] max-[700px]:leading-[1.5]
                   ${isActive ? 'bg-[var(--exp-bg-color)] text-[var(--company-label)]' : 'bg-[var(--bg-color)] text-[var(--text-secondary)] hover:bg-[var(--text-main)] hover:text-[var(--bg-color)]'}
                 `}
               >
-                <p className='text-[10px] md:text-base'>{shortLabel}</p>
+                <p className='text-[12px] md:text-base'>{shortLabel}</p>
                 <span className={`max-[1024px]:hidden ${isActive ? '' : ''}`}>&#10095;</span>
               </button>
             );
