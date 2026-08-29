@@ -13,7 +13,7 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <article
       ref={ref}
-      className="reveal flex h-[300px] w-[300px] flex-col items-center rounded-xl bg-[var(--service-bg)] p-10 text-center shadow-[0px_10px_30px_rgba(0,0,0,0.1)] md:h-[320px] md:w-[360px] max-[1024px]:w-[500px] max-[700px]:mx-[15px] max-[700px]:w-[100%]"
+      className="reveal flex h-[300px] w-[300px] flex-col items-center rounded-xl bg-[var(--service-bg)] p-10 text-center shadow-[0px_10px_30px_rgba(0,0,0,0.1)] md:h-[320px] md:w-[360px] max-[1024px]:w-[500px] max-[700px]:mx-0 max-[700px]:w-full"
     >
       <img
         src={icon}
@@ -66,12 +66,16 @@ export default function Services() {
       </div>
 
       <div
-        className="flex flex-col items-center justify-center gap-6 py-20 min-[1025px]:flex-row max-[1024px]:flex-col max-[1024px]:gap-5"
+        className="flex flex-col items-center justify-center gap-6 py-20 min-[1025px]:flex-row max-[1024px]:gap-5"
         role="list"
         aria-label="Services offered"
       >
         {services.map((service) => (
-          <div key={service.id} role="listitem">
+          <div
+            key={service.id}
+            role="listitem"
+            className="w-full max-w-[500px]"
+          >
             <ServiceCard
               icon={service.icon}
               title={service.title}
