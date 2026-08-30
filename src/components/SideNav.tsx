@@ -83,7 +83,7 @@ export default function SideNav({ isOpen, onClose }: SideNavProps) {
         <button
           type="button"
           onClick={toggleTheme}
-          className="flex h-6 w-6 items-center justify-center rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6C63FF]"
+          className="flex h-9 w-9 items-center justify-center rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6C63FF]"
           aria-label={
             theme === 'light'
               ? 'Switch to dark mode'
