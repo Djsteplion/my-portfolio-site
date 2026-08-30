@@ -68,7 +68,8 @@ export const experienceItems: ExperienceItem[] = [
     companyUrl: 'https://atcafrica.com/',
     role: 'Front-end Web Developer',
     location: 'Remote',
-    timeFrame: 'Oct 2023 - July 2026 · ',
+    //timeFrame: 'Oct 2023 - July 2026 · ',
+    timeFrame: 'Oct 2023 - Mar 2026 · ',
     tools: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'TanStack Query'],
     responsibilities: [
       'Architected and developed responsive web applications with Next.js, React, TypeScript, and Tailwind CSS, focusing on maintainability, performance, and scalable frontend architecture.',
