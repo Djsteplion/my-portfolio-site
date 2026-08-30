@@ -89,7 +89,7 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
             height={24}
             loading="lazy"
             decoding="async"
-            className="h-2.5 w-5"
+            className="h-3 w-3"
           />
 
           <span className={`pl-2.5 text-xs ${theme === 'light' ? 'text-neutral-700' : 'text-[#f9f7f7]'}`}>
