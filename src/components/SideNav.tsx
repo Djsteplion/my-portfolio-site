@@ -105,7 +105,7 @@ export default function SideNav({ isOpen, onClose }: SideNavProps) {
             aria-hidden="true"
             width={24}
             height={24}
-            className="h-full w-full"
+            className="h-6 w-6"
           />
         </button>
 
