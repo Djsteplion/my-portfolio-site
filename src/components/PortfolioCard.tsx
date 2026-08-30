@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { usePostHog } from '@posthog/react';
 
 import type { PortfolioItem } from '../types';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface PortfolioCardProps {
   item: PortfolioItem;
 }
 
 export default function PortfolioCard({ item }: PortfolioCardProps) {
+  const { theme } = useTheme();
   const [imageLoaded, setImageLoaded] = useState(false);
   const posthog = usePostHog();
 
@@ -77,17 +79,20 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
           className="mt-2.5 flex w-fit flex-row items-center rounded-xl border border-[#b0b0b0] px-2.5 py-[5px] no-underline transition-transform duration-300 hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6C63FF]"
         >
           <img
-            src="/images/Link (1).png"
+            //src="/images/Link.png"
+            src={ theme === 'light'
+              ? '/images/link-24.png'
+              : '/images/link-5-24.png'}
             alt=""
             aria-hidden="true"
-            width={20}
-            height={10}
+            width={24}
+            height={24}
             loading="lazy"
             decoding="async"
             className="h-2.5 w-5"
           />
 
-          <span className="pl-2.5 text-xs text-[#8f8c8c]">
+          <span className={`pl-2.5 text-xs ${theme === 'light' ? 'text-neutral-700' : 'text-[#f9f7f7]'}`}>
             {item.viewLinkLabel}
           </span>
         </a>

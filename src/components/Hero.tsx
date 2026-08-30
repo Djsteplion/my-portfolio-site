@@ -138,24 +138,24 @@ export default function Hero() {
             src="/images/back (1).png"
             alt=""
             width={430}
-            height={360}
+            height={340}
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="h-[360px] w-[430px] animate-rotate360 max-[1024px]:h-[288px] max-[1024px]:w-[344px]"
+            className="h-[300px] w-[430px] animate-rotate360 max-[1024px]:h-[230px] max-[1024px]:w-[344px]"
           />
         </div>
 
-        <div className="relative z-[2]">
+        <div className="relative z-[2] h-[330px] w-[400px] rounded-[20px] max-[1024px]:h-[264px] max-[1024px]:w-[320px]">
           <img
             src="/images/Stephen_Olayiwola.webp"
             alt="Portrait of Stephen Olayiwola"
-            width={400}
-            height={330}
+            width={1184}
+            height={864}
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="h-[330px] w-[400px] rounded-[20px] max-[1024px]:h-[264px] max-[1024px]:w-[320px]"
+            className="rounded-[20px] object-cover"
           />
         </div>
       </div>

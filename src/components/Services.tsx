@@ -1,4 +1,5 @@
 import { services } from '../data/services';
+
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface ServiceCardProps {
@@ -13,7 +14,7 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <article
       ref={ref}
-      className="reveal flex h-[300px] w-[300px] flex-col items-center rounded-xl bg-[var(--service-bg)] p-10 text-center shadow-[0px_10px_30px_rgba(0,0,0,0.1)] md:h-[320px] md:w-[360px] max-[1024px]:w-[500px] max-[700px]:mx-0 max-[700px]:w-full"
+      className="reveal mx-auto flex h-[300px] w-[300px] flex-col items-center rounded-xl bg-[var(--service-bg)] p-10 text-center shadow-[0px_10px_30px_rgba(0,0,0,0.1)] md:h-[320px] md:w-[360px] max-[1024px]:w-[500px] max-[700px]:mx-0 max-[700px]:w-full"
     >
       <img
         src={icon}

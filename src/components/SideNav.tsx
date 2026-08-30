@@ -98,13 +98,13 @@ export default function SideNav({ isOpen, onClose }: SideNavProps) {
           <img
             src={
               theme === 'light'
-                ? '/images/sun (1).png'
-                : '/images/moon (1).png'
+                ? '/images/idea-24.png'
+                : '/images/moon-4-24.png'
             }
             alt=""
             aria-hidden="true"
-            width={20}
-            height={20}
+            width={24}
+            height={24}
             className="h-full w-full"
           />
         </button>
