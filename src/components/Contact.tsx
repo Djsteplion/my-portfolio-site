@@ -40,7 +40,7 @@ export default function Contact() {
             />
 
             <div>
-              <h3 className="pb-3 text-sm font-normal text-[#6C63FF]">
+              <h3 className="pb-3 text-sm font-normal text-[var(--contact-text)]">
                 Location
               </h3>
               <p className="text-base text-[#999]">Nigeria</p>
@@ -60,7 +60,7 @@ export default function Contact() {
             />
 
             <div>
-              <h3 className="pb-3 text-sm font-normal text-[#6C63FF]">
+              <h3 className="pb-3 text-sm font-normal text-[var(--contact-text)]">
                 Phone
               </h3>
               <a
@@ -86,7 +86,7 @@ export default function Contact() {
             />
 
             <div>
-              <h3 className="pb-3 text-sm font-normal text-[#6C63FF]">
+              <h3 className="pb-3 text-sm font-normal text-[var(--contact-text)]">
                 Email
               </h3>
 
@@ -130,7 +130,7 @@ export default function Contact() {
           <a
             href="mailto:stephenolayiwola100@gmail.com"
             aria-label="Email Stephen Olayiwola about a project or job"
-            className="inline-block rounded-lg bg-[#6C63FF] px-[30px] py-3 font-semibold text-white no-underline transition-colors duration-300 hover:bg-[#5a52d4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6C63FF]"
+            className="inline-block rounded-lg bg-[#6A15B7] px-[30px] py-3 font-semibold text-white no-underline transition-colors duration-300 hover:bg-[#5a52d4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6C63FF]"
           >
             Hire Me
           </a>

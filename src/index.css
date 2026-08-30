@@ -19,6 +19,7 @@
   --company-label: #44397a;
   --portfolio-summary-text: #d9dbdfe0;
   --portfolio-lang:  rgb(255 255 255 / 80%);
+  --contact-text: #dbb8fc;
 }
 
 body.light-theme {
@@ -38,6 +39,7 @@ body.light-theme {
   --company-label: #d48cd4;
   --portfolio-summary-text: #444444; 
   --portfolio-lang: rgb(17 17 17 / 80%);
+  --contact-text: #700870;
 }
 
 * {

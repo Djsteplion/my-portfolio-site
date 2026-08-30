@@ -145,8 +145,8 @@ export default function Portfolio() {
               aria-pressed={isActive}
               className={`rounded-[20px] border px-[15px] py-1.5 text-[13px] transition-all duration-300 hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6C63FF] ${
                 isActive
-                  ? 'border-[#6C63FF] bg-[#6C63FF] text-white'
-                  : 'border-[var(--resume-border)] bg-transparent text-[var(--text-secondary)] hover:border-[#6C63FF] hover:text-[var(--text-main)]'
+                  ? 'border-[#6A15B7] bg-[#6A15B7] text-white'
+                  : 'border-[var(--resume-border)] bg-transparent text-[var(--text-secondary)] hover:border-[#6A15B7] hover:text-[var(--text-main)]'
               }`}
             >
               {filter.label}
