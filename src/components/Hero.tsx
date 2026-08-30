@@ -120,7 +120,9 @@ export default function Hero() {
         <a
           href="#hero_text"
           aria-label="Scroll down to continue reading"
-          className="flex animate-bounce items-center gap-2 rounded-full border border-neutral-300 px-4 py-2 text-xs text-[var(--text-secondary)] backdrop-blur-md transition hover:border-[#6C63FF] hover:text-[#6C63FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6C63FF]"
+          className="flex animate-bounce items-center gap-2 rounded-full border border-neutral-300 px-4 py-2 text-xs text-[var(--text-secondary)] backdrop-bl
+ur-md transition hover:border-[#6C63FF] hover:text-[#6C63FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outli
+ne-[#6C63FF]"
         >
           Scroll down
           <span aria-hidden="true" className="text-base">
@@ -138,7 +140,7 @@ export default function Hero() {
             src="/images/back (1).png"
             alt=""
             width={430}
-            height={340}
+            height={360}
             loading="eager"
             decoding="async"
             fetchPriority="high"
@@ -146,16 +148,16 @@ export default function Hero() {
           />
         </div>
 
-        <div className=" absolute">
+        <div className="relative z-[2]">
           <img
             src="/images/Stephen_Olayiwola.webp"
             alt="Portrait of Stephen Olayiwola"
-            width={1184}
-            height={864}
+            width={400}
+            height={330}
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="rounded-[20px] h-[330px] w-[400px] rounded-[20px] max-[1024px]:h-[264px] max-[1024px]:w-[320px]"
+            className="h-[330px] w-[400px] rounded-[20px] max-[1024px]:h-[264px] max-[1024px]:w-[320px]"
           />
         </div>
       </div>
