@@ -85,7 +85,8 @@ export const experienceItems: ExperienceItem[] = [
     company: 'SABO',
     role: 'Frontend Engineer',
     location: 'Hybrid',
-    timeFrame: 'Feb 2022 - Dec 2025 ·',
+    //timeFrame: 'Feb 2022 - Dec 2025 ·',
+    timeFrame: 'Feb 2021 – Present (Paused)',
     tools: ['React', 'TypeScript', 'Tailwind CSS'],
     responsibilities: [
       'Architected and developed the frontend of a real-time web chatting application using React, TypeScript, and Tailwind CSS, with emphasis on reusable architecture and responsive user experiences.',
