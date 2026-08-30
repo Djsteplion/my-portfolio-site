@@ -142,11 +142,11 @@ export default function Hero() {
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="h-[300px] w-[430px] animate-rotate360 max-[1024px]:h-[230px] max-[1024px]:w-[344px]"
+            className="h-[360px] w-[430px] animate-rotate360 max-[1024px]:h-[288px] max-[1024px]:w-[344px]"
           />
         </div>
 
-        <div className="relative z-[2] h-[330px] w-[400px] rounded-[20px] max-[1024px]:h-[264px] max-[1024px]:w-[320px]">
+        <div className=" absolute">
           <img
             src="/images/Stephen_Olayiwola.webp"
             alt="Portrait of Stephen Olayiwola"
@@ -155,7 +155,7 @@ export default function Hero() {
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="rounded-[20px] object-cover"
+            className="rounded-[20px] h-[330px] w-[400px] rounded-[20px] max-[1024px]:h-[264px] max-[1024px]:w-[320px]"
           />
         </div>
       </div>
