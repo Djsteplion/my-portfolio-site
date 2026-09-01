@@ -25,9 +25,9 @@ export default function Contact() {
         </h2>
       </div>
 
-      <div className="mt-[30px] flex w-full flex-col-reverse items-start gap-[50px] pb-[30px] min-[1025px]:mt-[50px] min-[1025px]:flex-row min-[1025px]:items-center min-[1025px]:gap-[100px]">
+      <div className="mt-[30px] flex w-full flex-col-reverse items-start gap-[50px] pb-[30px] min-[1025px]:mt-[50px] min-[1025px]:flex-row min-[1025px]:items-start min-[1025px]:gap-[100px]">
         <address className="not-italic">
-          <div className="mt-[30px] flex flex-row items-center gap-2.5">
+          {/*<div className="mt-[30px] flex flex-row items-center gap-2.5">
             <img
               src="/images/Icon (9).png"
               alt=""
@@ -45,9 +45,9 @@ export default function Contact() {
               </h3>
               <p className="text-base text-[#999]">Nigeria</p>
             </div>
-          </div>
+          </div>*/}
 
-          <div className="mt-[30px] flex flex-row items-center gap-2.5">
+          {/*<div className="mt-[30px] flex flex-row items-center gap-2.5">
             <img
               src="/images/Icon (11).png"
               alt=""
@@ -59,7 +59,7 @@ export default function Contact() {
               className="h-14 w-14"
             />
 
-            <div>
+           <div>
               <h3 className="pb-3 text-sm font-normal text-[var(--contact-text)]">
                 Phone
               </h3>
@@ -71,9 +71,9 @@ export default function Contact() {
                 (+234) 904 597 7499
               </a>
             </div>
-          </div>
+          </div>*/}
 
-          <div className="mt-[30px] flex flex-row items-center gap-2.5">
+          <div className="mt-[40px] flex flex-row items-center gap-2.5">
             <img
               src="/images/Icon (13).png"
               alt=""

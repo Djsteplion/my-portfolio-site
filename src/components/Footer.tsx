@@ -41,7 +41,7 @@ export default function Footer() {
               </a>
             </li>
 
-            <li>
+            {/*<li>
               <a
                 href="https://x.com/djsteplion"
                 target="_blank"
@@ -60,7 +60,7 @@ export default function Footer() {
                   className="w-5 transition-transform duration-300 hover:-translate-y-[3px]"
                 />
               </a>
-            </li>
+            </li>*/}
 
             <li>
               <a
